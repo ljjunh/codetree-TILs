@@ -1,2 +1,2 @@
-n = int(input())
+n = input()
 print(f'Your score is {n} point.')
