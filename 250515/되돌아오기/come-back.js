@@ -28,9 +28,8 @@ for (let i = 0; i < n; i++){
         t++;
         if (i !== 0 && x === 0 && y === 0){
             res = t;
+            break;
         }
     }
-    
 }
-
 console.log(res);
