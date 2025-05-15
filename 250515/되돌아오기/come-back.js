@@ -18,18 +18,26 @@ const dir = {
     'N' : 3
 }
 
-for (let i = 0; i < n; i++){
-    let [d, v] = moves[i].split(' ');
-    v = Number(v);
-
+function move(d, v){
     for (let j = 0; j < v; j++){
         x += dx[dir[d]];
         y += dy[dir[d]];
         t++;
-        if (i !== 0 && x === 0 && y === 0){
+        if (x === 0 && y === 0){
             res = t;
-            break;
+            return true;
         }
+    }
+    return false;
+}
+
+for (let i = 0; i < n; i++){
+    let [d, v] = moves[i].split(' ');
+    v = Number(v);
+
+    const done = move(d, v);
+    if (done){
+        break;
     }
 }
 console.log(res);
