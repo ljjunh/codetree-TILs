@@ -74,6 +74,7 @@ for(let i = 0; i < k; i++){
         }
         if(a[ny][nx]){
             q.push([ny, nx]);
+            a[ny][nx] = 0;
         }else{
             q.pop();
             q.push([ny, nx]);
