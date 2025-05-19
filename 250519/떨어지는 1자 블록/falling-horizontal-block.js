@@ -15,7 +15,7 @@ while(true){
     for(let i = 0; i < m; i++){
         let ny = y + 1;
         let nx = x + i;
-        if(grid[ny][nx] || ny === n){
+        if(ny === n || grid[ny][nx]){
             flag = 1;
             break;
         };
