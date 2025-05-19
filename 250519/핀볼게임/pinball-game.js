@@ -12,19 +12,13 @@ let mx = -1e9;
 
 function go(y, x, d, cnt){
 
-    // if(cnt > 0 && (y < 0 || y >= n || x < 0 || y >= n)){
-    //     mx = Math.max(mx, cnt);
-    //     return
-    // }
-
     let ny = y + dy[d];
     let nx = x + dx[d];
 
-    if(ny < 0 || ny >= n || nx < 0 || ny >= n){
+    if(ny < 0 || ny >= n || nx < 0 || nx >= n){
         mx = Math.max(mx, cnt + 1);
         return
     }
-
 
     if(grid[ny][nx] === 1){
         if(d === 0 || d === 2){
