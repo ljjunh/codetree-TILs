@@ -1,7 +1,7 @@
 const fs = require("fs");
 const input = fs.readFileSync(0).toString().trim().split('\n');
 const n = Number(input[0]);
-const grid = input.slice(1, n + 1).map(line => line.split(' ').map(Number));
+const grid = input.slice(1, n + 1).map(line => line.trim().split(' ').map(Number));
 // Please Write your code here.
 
 // 0-상, 1-우, 2-하, 3-좌
