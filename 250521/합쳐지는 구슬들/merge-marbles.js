@@ -46,7 +46,7 @@ for(let k = 0; k < t; k++){
                 const[ni, nj, nd] = move(i, j, a[i][j][1]);
                 if(temp[ni][nj][0]){
                     if(temp[ni][nj][2] < a[i][j][2]){
-                        temp[ni][nj][1] = a[i][j][1];
+                        temp[ni][nj][1] = nd;
                         temp[ni][nj][2] = a[i][j][2];
                     } 
                     temp[ni][nj][0] += a[i][j][0];
@@ -56,12 +56,6 @@ for(let k = 0; k < t; k++){
             }
         }
     }
-    
-    // for(let i = 0; i < n; i++){
-    //     for(let j = 0; j < n; j++){
-    //         a[i][j] = [...temp[i][j]];
-    //     }
-    // }
     a = temp;
 }
 
