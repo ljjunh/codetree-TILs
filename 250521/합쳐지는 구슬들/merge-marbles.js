@@ -38,8 +38,6 @@ for(let i = 0; i < m; i++){
     a[r][c] = [w, d, i + 1];
 }
 
-console.log(a);
-
 for(let k = 0; k < t; k++){
     const temp = Array(n).fill().map(() => Array(n).fill([0, 0, 0]));
     for(let i = 0; i < n; i++){
@@ -64,8 +62,7 @@ for(let k = 0; k < t; k++){
     //         a[i][j] = [...temp[i][j]];
     //     }
     // }
-    a = temp
-    console.log(a);
+    a = temp;
 }
 
 let cnt = 0;
