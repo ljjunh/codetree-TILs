@@ -3,7 +3,7 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 
 const [n, m, t] = input[0].split(' ').map(Number);
 const grid = input.slice(1, 1 + n).map(line => line.split(' ').map(Number));
-let marbles = input.slice(1 + n, 1 + n + m).map(line => line.split(' ').map(Number));
+let marbles = input.slice(1 + n, 1 + n + m).map(line => line.split(' ').map(v => Number(v) - 1));
 
 // Please Write your code here.
 
@@ -42,7 +42,6 @@ for(let i = 0; i < t; i++){
     clear();
     for(let j = 0; j < marbles.length; j++){
         let [y, x] = marbles[j];
-        y--; x--;
         let [ny, nx] = find(y, x);
         cnt[ny][nx]++;
     }
