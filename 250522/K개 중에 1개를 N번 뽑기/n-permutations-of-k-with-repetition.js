@@ -7,17 +7,17 @@ const [k, n] = input[0].split(' ').map(Number);
 const temp = [];
 const res = [];
 
-function go(idx, cnt){
+function go(cnt){
     if(cnt === n){
         res.push(temp.join(' '));
         return;
     }
     for(let i = 1; i <= k; i++){
         temp.push(i);
-        go(i, cnt + 1);
+        go(cnt + 1);
         temp.pop();
     }
 }
 
-go(0, 0);
+go(0);
 console.log(res.join('\n'));
