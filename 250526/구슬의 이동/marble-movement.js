@@ -45,7 +45,6 @@ for(let i = 0; i < m; i++){
 }
 
 for(let l = 0; l < t; l++){
-    
     for(let i = 0; i < n; i++){
         for(let j = 0; j < n; j++){
             nexGrid[i][j] = [];
@@ -69,8 +68,12 @@ for(let l = 0; l < t; l++){
             }
         }
     }
-    
-    grid = nexGrid;
+
+    for(let i = 0; i < n; i++){
+        for(let j = 0; j < n; j++){
+            grid[i][j] = nexGrid[i][j];
+        }
+    }
 
 }
 
