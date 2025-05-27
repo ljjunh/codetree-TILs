@@ -5,7 +5,7 @@ const [n, m] = input[0].split(' ').map(Number);
 const grid = input.slice(1, n + 1).map(line => line.split(' ').map(Number));
 
 // Please Write your code here.
-let maxGold = Number.MIN_SAFE_INTEGER;
+let maxGold = 0;
 
 for (let i = 0; i < n; i++) {
   for (let j = 0; j < n; j++) {
