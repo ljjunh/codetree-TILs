@@ -8,8 +8,8 @@ vector<int> temp;
 
 vector<vector<int>> v;
 
-void go(int n, int k) {
-    if(temp.size() == n){
+void go(int cnt) {
+    if(cnt == n){
         v.push_back(temp);
         return;
     }
@@ -17,7 +17,7 @@ void go(int n, int k) {
     for(int i = 1; i <= k; i++){
         if(temp.size() >= 2 && temp[temp.size() - 2] == temp[temp.size() - 1] && temp[temp.size() - 1] == i) continue;
         temp.push_back(i);
-        go(n, k);
+        go(cnt + 1);
         temp.pop_back();
     }
 }
@@ -27,7 +27,7 @@ int main() {
 
     // Please write your code here.
 
-    go(n, k);
+    go(0);
 
     for(auto it : v){
         for(auto i : it){
